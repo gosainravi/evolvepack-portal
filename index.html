@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EvolvePack | Enterprise Dashboard</title>
+<style>
+  :root {
+    --bg: #0B0F1A;
+    --surface: #141B2E;
+    --border: #2A3550;
+    --text: #EDEFF5;
+    --muted: #94A2BD;
+    --accent: #7C8CF5;
+    --sales: #F0934A;
+    --production: #5B9BD9;
+    --inventory: #3FBE82;
+    --finance: #36B6A1;
+    --purchase: #D87FAE;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Inter, -apple-system, sans-serif;
+    background: radial-gradient(circle at 20% -10%, #1B2438 0%, var(--bg) 55%);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .card {
+    max-width: 640px;
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 0.25rem 0.8rem;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 0.01em;
+  }
+  p.lead {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 0 0 1.8rem 0;
+    line-height: 1.5;
+  }
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .tile {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem 0.3rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+  .tile.production { border-top: 3px solid var(--production); }
+  .tile.sales { border-top: 3px solid var(--sales); }
+  .tile.inventory { border-top: 3px solid var(--inventory); }
+  .tile.finance { border-top: 3px solid var(--finance); }
+  .tile.purchase { border-top: 3px solid var(--purchase); }
+  a.launch {
+    display: inline-block;
+    background: var(--accent);
+    color: #0B0F1A;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.85rem 2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: opacity 0.15s ease;
+  }
+  a.launch:hover { opacity: 0.85; }
+  .foot {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  .foot a { color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="badge">EvolvePack</span>
+    <h1>📦 Enterprise Business Dashboard</h1>
+    <p class="lead">
+      Live Production, Sales, Inventory, Finance and Purchase reporting —
+      built in Streamlit, updated from the latest data workbook.
+    </p>
+
+    <div class="tiles">
+      <div class="tile production">Production</div>
+      <div class="tile sales">Sales</div>
+      <div class="tile inventory">Inventory</div>
+      <div class="tile finance">Finance</div>
+      <div class="tile purchase">Purchase</div>
+    </div>
+
+    <!--
+      Replace the href below with your deployed Streamlit Community Cloud
+      URL, e.g. https://your-app-name.streamlit.app
+    -->
+    <a class="launch" href="https://evolvepack-evexyibwix7deypfebphvn.streamlit.app/" target="_blank" rel="noopener">
+      Launch Dashboard →
+    </a>
+
+    <div class="foot">
+      Internal use only · Hosted on Streamlit Community Cloud ·
+      <a href="https://github.com/" target="_blank" rel="noopener">Source on GitHub</a>
+    </div>
+  </div>
+</body>
+</html>
